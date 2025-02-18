@@ -1,0 +1,157 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2c3e50;  /* Dark Gray */
+    color: #ecf0f1;  /* Light Gray Text */
+    line-height: 1.6;
+}
+
+header {
+    background-color: #34495e;  /* Slightly lighter Dark Gray */
+    color: #ecf0f1;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #3498db;  /* Blue Links */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f39c12;  /* Hover color: Yellow */
+}
+
+section {
+    padding: 60px 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+section h2 {
+    color: #3498db;  /* Blue Headers */
+    font-size: 28px;
+    margin-bottom: 20px;
+    animation: slideInLeft 1s ease-out;
+}
+
+section p {
+    font-size: 18px;
+    color: #bdc3c7;  /* Light Gray for Paragraphs */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Skill List */
+.skill-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 0;
+}
+
+.skill-item {
+    background: #34495e;  /* Dark Gray for Skill Items */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: scale(1.1);
+    background-color: #3498db;  /* Change to Blue on Hover */
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #34495e;  /* Dark Gray for Project Cards */
+    border: 1px solid #2c3e50;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    background-color: #3498db;  /* Highlight Projects on Hover */
+}
+
+footer {
+    background-color: #34495e;  /* Same Dark Gray for Footer */
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    transition: background-color 0.3s ease-in-out;
+}
+
+a {
+    color: #3498db;  /* Blue Links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #f39c12;  /* Yellow on Hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header nav ul {
+        text-align: center;
+        display: block;
+    }
+
+    header nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    section {
+        padding: 30px 20px;
+    }
+
+    footer {
+        position: relative;
+    }
+}
